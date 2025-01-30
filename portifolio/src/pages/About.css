@@ -1,0 +1,196 @@
+:root {
+  --bg-color: #ffffff;
+  --text-color: #2c3e50;
+  --secondary-text: #444;
+  --accent-color: #3498db;
+  --card-bg: #ffffff;
+  --skill-bg: #f0f0f0;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-color: #1a1a1a;
+    --text-color: #ecf0f1;
+    --secondary-text: #bdc3c7;
+    --accent-color: #2980b9;
+    --card-bg: #2d2d2d;
+    --skill-bg: #3d3d3d;
+  }
+}
+
+/* Default styles */
+.about {
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 40px;
+  margin-left: 40px;
+  padding: 2rem;
+  background-color: var(--bg-color);
+  color: var(--accent-color);
+}
+
+.about-intro {
+  display: flex;
+  gap: 3rem;
+  margin-bottom: 4rem;
+  align-items: center;
+}
+
+.profile-image {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.intro-text {
+  flex: 1;
+}
+
+.bio {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: var(--secondary-text);
+  margin-bottom: 1.5rem;
+}
+
+.skills h3 {
+  color: var(--text-color);
+  margin-bottom: 1rem;
+}
+
+.skills ul {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+}
+
+.skills li {
+  background: var(--skill-bg);
+  color: var(--text-color);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+}
+
+.passions-section {
+  margin-top: 4rem;
+}
+
+.passions-section h2 {
+  text-align: center;
+  margin-bottom: 3rem;
+  color: var(--text-color);
+}
+
+
+.passions-grid {
+  display: flex;
+  flex-wrap: wrap; 
+  gap: 2rem;
+  justify-content: space-between; 
+  position: relative;
+  overflow: hidden; 
+}
+
+/* Passion card styling */
+.passion-card {
+  background: rgba(91, 89, 89, 0.365);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  opacity: 0; 
+  transform: translateX(100%); 
+  animation: slideInFromRight 0.5s forwards; 
+  flex: 1 1 calc(33.33% - 1.5rem); 
+  max-width: calc(33.33% - 1.5rem);
+}
+
+/* Hover effect */
+.passion-card:hover {
+  transform: translateY(-5px);
+}
+
+.passion-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.passion-card h3 {
+  margin: 1rem;
+  color: var(--text-color);
+
+}
+
+.passion-card p {
+  margin: 0 1rem 1.5rem;
+  color: var(--text-color);
+  font-size: 0.9rem;
+}
+
+/* Keyframes for the horizontal slide-in effect */
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%); /* Start from the right */
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0); /* Move to original position */
+    opacity: 1;
+  }
+}
+
+/* Media query for small screens (mobile-first approach) */
+@media (max-width: 768px) {
+  .about-intro {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .profile-image {
+    width: 200px;
+    height: 200px;
+  }
+
+  .skills ul {
+    justify-content: center;
+  }
+
+  /* Update passions-grid for small screens */
+  .passions-grid {
+    flex-direction: column; /* Stack vertically */
+    gap: 20px;
+  }
+
+  /* Passion card settings for small screens */
+  .passion-card {
+    width: 100%; /* Make each card take full width */
+    max-width: 100%; /* Ensure it doesn’t overflow */
+    opacity: 0; /* Initially hidden for animation */
+    transform: translateX(100%); /* Start from the right */
+    animation: slideInFromRight 0.5s forwards;
+  }
+
+  /* Add delay to stagger animations */
+  .passion-card:nth-child(1) {
+    animation-delay: 0.2s; /* First card animates immediately */
+  }
+
+  .passion-card:nth-child(2) {
+    animation-delay: 0.6s; /* Second card delays slightly */
+  }
+
+  .passion-card:nth-child(3) {
+    animation-delay: 1s; /* Third card delays more */
+  }
+
+  .passion-card:nth-child(4) {
+    animation-delay: 1.4s; /* Fourth card delays even more */
+  }
+}
+

@@ -1,0 +1,142 @@
+/* Navbar.css */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 15px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--accent-color);
+    z-index: 1000;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--text-color);
+    text-decoration: none;
+  }
+  
+  /* 🔹 Burger Icon */
+  .burger {
+    display: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1100;
+  }
+  
+  .burger .line {
+    width: 25px;
+    height: 3px;
+    background-color: var(--text-color);
+    margin: 5px 0;
+    transition: all 0.3s ease;
+  }
+  
+  .burger.open .line:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  
+  .burger.open .line:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .burger.open .line:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+  
+  /* 🔹 Navigation Links */
+  .nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+  }
+  
+  .nav-links a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 1rem;
+    transition: all 0.2s ease;
+  }
+  
+  .nav-links a:hover {
+    color: var(--accent-color);
+  }
+  
+  /* 🔹 Theme Toggle */
+  .theme-toggle {
+    position: absolute;
+    top: 5px;
+    right: 0px;
+    z-index: 1100;
+    margin-left: 20px;
+  }
+  
+  #theme-switcher {
+    background: rgba(79, 192, 141, 0.15);
+    border: none;
+    padding: 5px;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin-right: 0px;
+    margin-left: 20px;
+    transition: all 0.3s ease;
+  }
+  
+  /* 🔹 Responsive Navbar */
+  @media screen and (max-width: 768px) {
+    .burger {
+      display: block;
+      position: absolute;
+      top: 10px;
+      right: 20px;
+      background: rgba(79, 192, 141, 0.15);
+      padding: 10px;
+      margin-left: 5px;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+  
+    .nav-links {
+      display: none;
+      position: fixed;
+      top: 45px;
+      right: 10px;
+      width: 80%;
+      max-width: 250px;
+      background: rgba(255, 255, 255, 0.2); /* 🔹 Light blur effect */
+      backdrop-filter: blur(10px); /* 🔹 Apply blur */
+      border-radius: 10px;
+      flex-direction: column;
+      text-align: center;
+      padding: 15px 0;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease-in-out;
+    }
+  
+    .nav-links.active {
+      display: flex;
+    }
+  
+    .nav-links a {
+      color: var(--text-color);
+      font-size: 1rem;
+      text-decoration: none;
+      padding: 10px;
+      transition: all 0.2s ease-in-out;
+    }
+  
+    .nav-links a:hover {
+      background: rgba(255, 255, 255, 0.3);
+      border-radius: 8px;
+    }
+  
+  
+    .theme-toggle {
+      top: 10px;
+      right: 60px;
+    }
+  }
+  
