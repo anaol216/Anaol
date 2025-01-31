@@ -36,7 +36,7 @@ const Home = () => {
 
   return (
     <section className="home">
-      <img src="/vite.svg" alt="Your Name" className="profile-image" />
+      <img src="profile-image.jpg" alt="Your Name" className="profile-image" />
       <div className="home-content">
         <h1>Hello, I'm Anaol</h1>
         <h2>
@@ -44,10 +44,11 @@ const Home = () => {
           <span className="cursor">|</span>
         </h2>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          Being a Frontend Developer, I specialize in crafting visually appealing and user-friendly web interfaces.
         </p>
         <p>
-          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+          As a Graphics Designer, I bring creativity to life through captivating visuals.
+          Let your self to <span>fail </span> and <span>learn </span> from your mistakes.
         </p>
       </div>
     </section>

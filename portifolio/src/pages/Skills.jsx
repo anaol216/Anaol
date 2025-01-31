@@ -1,7 +1,6 @@
-// src/pages/Skills.jsx
 import React from 'react';
 import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaSass, FaBootstrap } from 'react-icons/fa';
-import { SiJava, SiCplusplus, SiCsharp, SiAdobephotoshop } from 'react-icons/si';
+import { SiCplusplus, SiAdobephotoshop } from 'react-icons/si';  // Removed SiJava
 import './Skills.css';
 
 const Skills = () => {
@@ -12,10 +11,8 @@ const Skills = () => {
     { icon: <FaReact />, name: 'React', color: '#61DAFB' },
     { icon: <FaSass />, name: 'Sass', color: '#CC6699' },
     { icon: <FaBootstrap />, name: 'Bootstrap', color: '#7952B3' },
-    { icon: <SiJava />, name: 'Java', color: '#007396' },
-    { icon: <SiAdobephotoshop />, name: 'Photoshop', color: '#31A8FF' },
     { icon: <SiCplusplus />, name: 'C++', color: '#00599C' },
-    { icon: <SiCsharp />, name: 'C#', color: '#239120' }
+    { icon: <SiAdobephotoshop />, name: 'Photoshop', color: '#31A8FF' }
   ];
 
   return (

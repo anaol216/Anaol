@@ -1,8 +1,8 @@
 import "./About.css";
 import codingImage from "../images/coding.jpg";
-import designingImage from "../images/Designing.jpg";
-import tradingImage from "../images/Trading.jpg";
-
+import designingImage from "../images/Photoshop.jpg";
+import tradingImage from "../images/Trade.jpg";
+import continiouslearn from "../images/Learn.jpg";
 const About = () => {
   return (
     <section className="about">
@@ -52,7 +52,7 @@ const About = () => {
           </div>
 
           <div className="passion-card">
-            <img src={codingImage} alt="Learning" />
+            <img src={continiouslearn} alt="Learning" />
             <h3>Continuous Learning</h3>
             <p>Regularly updating my skills with latest technologies and frameworks</p>
           </div>
