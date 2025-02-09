@@ -23,7 +23,7 @@ function App() {
   };
 
   return (
-    <Router>
+    <Router basename="/Anaol">
       <Navbar toggleMenu={toggleMenu} menuOpen={menuOpen} darkTheme={darkTheme} setDarkTheme={setDarkTheme} />
       <SocialIcons />
 
