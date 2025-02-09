@@ -1,0 +1,95 @@
+/* App.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth theme transition */
+}
+
+/* Theme Variables */
+:root {
+  --bg-color: #ffffff;
+  --text-color: #333;
+  --accent-color: #4FC08D;
+  --nav-bg: #ffffff;
+  --card-bg: #ffffff;
+  --skill-bg: #f0f0f0;
+  --nav-link-color: #333; /* Ensure visible navbar links */
+}
+
+/* Dark Mode Adjustments */
+.dark-theme {
+  --bg-color: #ffffff; /* Keep background white */
+  --text-color: #333; /* Keep text dark */
+  --accent-color: #4FC08D;
+  --nav-bg: rgba(255, 255, 255, 0.87);
+  --card-bg: #2d2d2d;
+  --skill-bg: #c7c2c2;
+  --nav-link-color: #000; /* Ensure navbar links remain visible */
+}
+
+body {
+  height: 100%;
+  background: var(--bg-color);
+  color: var(--text-color);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0px;
+}
+
+/* Navbar */
+.nav-links a {
+  color: var(--nav-link-color) !important; /* Keep navbar links visible */
+  transition: color 0.3s ease;
+}
+
+/* Home Section */
+.home {
+  padding: 6rem 5% 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+  flex: 1;
+  height:100%;
+  margin-left: 40px;
+  margin-bottom: 60px;
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  margin-left: 10px;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 20px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .home {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 3rem;
+    padding: 5rem 5% 2rem;
+    margin-left: 0;
+  }
+
+  .profile-image {
+    max-width: 250px;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .home {
+    padding: 4rem 5% 2rem;
+  }
+}
