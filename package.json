@@ -1,8 +1,16 @@
 {
+  "name": "portifolio",
+  "version": "0.0.0",
+  "homepage": "https://anaol216.github.io/Anaol",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
     "react-icons": "^5.4.0",
     "react-router-dom": "^7.1.3"
-  },
-  "homepage": "/Anaol/"
+  }
 }
